@@ -1,0 +1,101 @@
+/* General Reset & Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: black;
+  }
+  
+  /* Grid Layout */
+  body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+  
+  /* Sections */
+  .header, .nav, .footer {
+    background: grey;
+    color: whitesmoke;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .content {
+    background: rgb(160, 146, 90);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .sidebar {
+    background: rgb(160, 146, 90);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Flexbox Navigation */
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  .nav-links a:hover {
+    background: turquoise;
+    border-radius: 5px;
+  }
+  
+  /* Flexbox Cards */
+  .cards {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .card {
+    flex: 1;
+    background: whitesmoke;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .main {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .main {
+      grid-template-columns: 1fr;
+    }
+    .nav-links {
+      flex-direction: column;
+    }
+    .cards {
+      flex-direction: column;
+    }
+  }
+  
